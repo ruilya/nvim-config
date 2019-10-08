@@ -122,14 +122,3 @@ endif
 set termguicolors
 set mouse=v
 set clipboard=unnamed
-
-" highlight group
-highlight ExtraWhitespace ctermbg=darkgreen guibg=darkgreen
-" before the first colorscheme command will ensure that the highlight group
-" gets created and is not cleared by future colorscheme commands.
-autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
-" match trailing whitespace, except when typing at the end of a line
-match ExtraWhitespace /\s\+\%#\@<!$/
-" let the highlighting show up as soon as you leave insert mode after entering
-" trailing whitespace
-autocmd InsertLeave * redraw!
