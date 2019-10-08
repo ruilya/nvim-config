@@ -87,6 +87,7 @@ set guifont=Hack
 set splitright
 set ruler
 match Ignore /\r$/
+set cinoptions=N-s,t0,+s,(0
 
 " Since Vim will source .vimrc from any directory you run Vim from, this is a
 " potential security hole; so, you should consider setting secure option. This
