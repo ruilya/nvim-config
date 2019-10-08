@@ -124,3 +124,5 @@ set mouse=v
 set clipboard=unnamed
 
 set makeprg=ninja
+set autoread
+autocmd FocusGained * :checktime
