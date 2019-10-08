@@ -132,3 +132,5 @@ augroup project
   autocmd!
   autocmd BufRead,BufNewFile *.h,*.hpp,*.cpp,*.cxx set filetype=cpp.doxygen
 augroup END
+
+let &path.="/usr/include/x86_64-linux-gnu/"
