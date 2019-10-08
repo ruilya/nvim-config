@@ -88,6 +88,14 @@ set splitright
 set ruler
 match Ignore /\r$/
 
+" Since Vim will source .vimrc from any directory you run Vim from, this is a
+" potential security hole; so, you should consider setting secure option. This
+" option will restrict usage of some commands in non-default .vimrc files;
+" commands that write to file or execute shell commands are not allowed and
+" map commands are displayed.
+set exrc
+set secure
+
 " Uncomment the following to have Vim load indentation rules and plugins
 " according to the detected filetype.
 if has("autocmd")
