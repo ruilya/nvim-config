@@ -122,3 +122,5 @@ endif
 set termguicolors
 set mouse=v
 set clipboard=unnamed
+
+set makeprg=ninja
