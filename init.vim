@@ -61,7 +61,7 @@ set expandtab
 set hlsearch
 
 set list
-set listchars=tab:>-,trail:¬,nbsp:+,eol:<
+set listchars=tab:>-,trail:¬,nbsp:+
 set guioptions-=T
 set guioptions-=r
 set guioptions-=m
