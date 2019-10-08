@@ -127,3 +127,8 @@ set makeprg=ninja
 set autoread
 autocmd FocusGained * :checktime
 set title
+
+augroup project
+  autocmd!
+  autocmd BufRead,BufNewFile *.h,*.hpp,*.cpp,*.cxx set filetype=cpp.doxygen
+augroup END
