@@ -113,10 +113,6 @@ let g:netrw_list_hide= '.*\.swp$,\~$,\.orig$'
 
 if has('nvim')
     "Guifont:h10
-  "call plug#begin('~/.config/nvim/plugged')
-  "Plug 'Shougo/deoplete.nvim' , { 'do': ':UpdateRemotePlugins' }
-  ""Plug 'ludovicchabant/vim-gutentags'
-  "call plug#end()
 endif
 
 set termguicolors
