@@ -1,4 +1,5 @@
-set runtimepath+=bundle/vim-pathogen
+let g:nvim_conf = fnamemodify(expand("$MYVIMRC"), ":p:h")
+let &runtimepath = &runtimepath . ',' . nvim_conf . '/bundle/vim-pathogen'
 
 execute pathogen#infect()
 let g:gutentags_modules = ['ctags', 'gtags_cscope']
