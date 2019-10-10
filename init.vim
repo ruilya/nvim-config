@@ -1,4 +1,4 @@
-
+set runtimepath+=bundle/vim-pathogen
 
 execute pathogen#infect()
 let g:gutentags_modules = ['ctags', 'gtags_cscope']
