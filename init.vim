@@ -4,6 +4,7 @@ execute pathogen#infect()
 let g:gutentags_modules = ['ctags', 'gtags_cscope']
 let g:gutentags_auto_add_gtags_cscope = 0
 let g:gutentags_ctags_extra_args = ['--fields=+ailmnS']
+let g:gutentags_cache_dir = expand('~/.cache/tags')
 
 augroup MyGutentagsStatusLineRefresher
     autocmd!
