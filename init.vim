@@ -1,22 +1,35 @@
 let g:nvim_conf = fnamemodify(expand("$MYVIMRC"), ":p:h")
 let &runtimepath = &runtimepath . ',' . nvim_conf . '/bundle/vim-pathogen'
 
-execute pathogen#infect()
-let g:gutentags_modules = ['ctags', 'gtags_cscope']
-let g:gutentags_auto_add_gtags_cscope = 0
-let g:gutentags_ctags_extra_args = ['--fields=+ailmnS']
-let g:gutentags_cache_dir = expand('~/.cache/tags')
+let g:pathogen_disabled = []
+if !has('unix')
+    call add(g:pathogen_disabled, 'vim-gutentags')
+    call add(g:pathogen_disabled, 'gutentags_plus')
+endif
 
-augroup MyGutentagsStatusLineRefresher
-    autocmd!
-    autocmd User GutentagsUpdating call lightline#update()
-    autocmd User GutentagsUpdated call lightline#update()
-augroup END
+execute pathogen#infect()
+
+if exists('g:loaded_gutentags')
+    let g:gutentags_modules = ['ctags', 'gtags_cscope']
+    let g:gutentags_auto_add_gtags_cscope = 0
+    let g:gutentags_ctags_extra_args = ['--fields=+ailmnS']
+    let g:gutentags_cache_dir = expand('~/.cache/tags')
+
+    augroup MyGutentagsStatusLineRefresher
+        autocmd!
+        autocmd User GutentagsUpdating call lightline#update()
+        autocmd User GutentagsUpdated call lightline#update()
+    augroup END
+endif
 
 set laststatus=2
 
 function LightlineTags()
-    return '%{gutentags#statusline("[Generating\ tags...]")}'
+    if exists('g:loaded_gutentags')
+        return '%{gutentags#statusline("[Generating\ tags...]")}'
+    else
+        return 'tags n/a'
+    endif
 endfunction
 
 
@@ -36,13 +49,6 @@ let g:lightline = {
 
 " fugitive bug
 autocmd BufReadPre fugitive:///* set fencs=utf8
-
-augroup MyGutentagsStatusLineRefresher
-    autocmd!
-    autocmd User GutentagsUpdating call lightline#update()
-    autocmd User GutentagsUpdated call lightline#update()
-augroup END
-
 
 syntax on
 set background=dark
