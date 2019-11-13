@@ -3,6 +3,8 @@ let &runtimepath = &runtimepath . ',' . nvim_conf . '/bundle/vim-pathogen'
 let g:ycm_max_diagnostics_to_display = 0
 let g:ycm_global_ycm_extra_conf = nvim_conf . '/ycm_extra_conf.py'
 let g:ycm_warning_symbol = 'WW'
+set encoding=utf8
+scriptencoding utf-8
 
 let g:pathogen_disabled = []
 "if !has('unix')
@@ -15,15 +17,35 @@ execute pathogen#infect()
 set laststatus=2
 
 let g:lightline = {
-      \ 'colorscheme': 'wombat',
-      \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ], [ 'filename' ] ,
-      \             [ 'gitbranch', 'readonly', 'modified', 'tags' ] ]
-      \ },
-      \ 'component_function': {
-      \   'gitbranch': 'fugitive#statusline'
-      \ },
-      \ }
+        \ 'component': {
+        \   'lineinfo': ' %3l:%-2v',
+        \ },
+        \ 'component_function': {
+        \   'readonly': 'LightlineReadonly',
+        \   'gitbranch': 'LightlineFugitive'
+        \ },
+        \ 'separator': { 'left': '', 'right': '' },
+        \ 'subseparator': { 'left': '', 'right': '' }
+        \ }
+
+let g:lightline.active = {
+    \ 'left': [ [ 'mode', 'paste' ],
+    \           [ 'readonly', 'filename', 'gitbranch', 'modified' ] ],
+    \ 'right': [ [ 'lineinfo' ],
+    \            [ 'percent' ],
+    \            [ 'fileformat', 'fileencoding', 'filetype' ] ] }
+
+function! LightlineReadonly()
+    return &readonly ? '' : ''
+endfunction
+
+function! LightlineFugitive()
+    if exists('*fugitive#head')
+        let branch = fugitive#head()
+        return branch !=# '' ? ' '.branch : ''
+    endif
+    return ''
+endfunction
 
 " fugitive bug
 autocmd BufReadPre fugitive:///* set fencs=utf8
