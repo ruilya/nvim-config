@@ -3,3 +3,4 @@ GRTAGS
 tags
 GTAGS
 *.un~
+.netrwhist

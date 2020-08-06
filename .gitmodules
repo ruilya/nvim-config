@@ -3,7 +3,7 @@
 	url = https://github.com/tpope/vim-pathogen
 [submodule "bundle/NeoSolarized"]
 	path = bundle/NeoSolarized
-	url = https://github.com/icymind/NeoSolarized
+	url = https://github.com/overcache/NeoSolarized
 [submodule "bundle/lightline.vim"]
 	path = bundle/lightline.vim
 	url = https://github.com/itchyny/lightline.vim
@@ -16,3 +16,30 @@
 [submodule "bundle/gutentags_plus"]
 	path = bundle/gutentags_plus
 	url = https://github.com/skywind3000/gutentags_plus
+[submodule "bundle/vim-gitgutter"]
+	path = bundle/vim-gitgutter
+	url = https://github.com/airblade/vim-gitgutter.git
+[submodule "bundle/YouCompleteMe"]
+	path = bundle/YouCompleteMe
+	url = https://github.com/ycm-core/YouCompleteMe
+[submodule "pack/tpope/start/vim-fugitive"]
+	path = pack/tpope/start/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive
+[submodule "bundle/cmake4vim"]
+	path = bundle/cmake4vim
+	url = https://github.com/ilyachur/cmake4vim
+[submodule "bundle/qbs.vim"]
+	path = bundle/qbs.vim
+	url = https://bitbucket.org/JohnKaul/qbs.vim
+[submodule "bundle/vim-airline-themes"]
+	path = bundle/vim-airline-themes
+	url = https://github.com/vim-airline/vim-airline-themes
+[submodule "bundle/vim-airline"]
+	path = bundle/vim-airline
+	url = https://github.com/vim-airline/vim-airline
+[submodule "bundle/vim-clang-format"]
+	path = bundle/vim-clang-format
+	url = https://github.com/rhysd/vim-clang-format
+[submodule "pack/airblade/start/vim-gitgutter"]
+	path = pack/airblade/start/vim-gitgutter
+	url = https://github.com/airblade/vim-gitgutter
