@@ -78,3 +78,5 @@ autocmd FileType c,cpp,objc vnoremap <buffer><Leader>cf :ClangFormat<CR>
 command Vg vertical G
 
 set cinoptions=g-4
+
+set autowrite
