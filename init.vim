@@ -80,3 +80,5 @@ command Vg vertical G
 set cinoptions=g-4
 
 set autowrite
+
+let g:clang_format#command = "clang-format-10"
