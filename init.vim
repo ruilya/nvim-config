@@ -84,3 +84,5 @@ set autowrite
 let g:clang_format#command = "clang-format-10"
 
 let g:gitgutter_max_signs = 1500
+
+autocmd FileType yaml setlocal shiftwidth=2 tabstop=2
