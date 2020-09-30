@@ -66,7 +66,7 @@ let g:cmake_compile_commands = 1
 let g:cmake_project_generator = "Ninja"
 let g:cmake_usr_args = "-C ~/.cmake_defs.cmake"
 
-nnoremap m<Space> :make -j16<CR>
+nnoremap m<Space> :make<CR>
 
 set scrolloff=5
 
