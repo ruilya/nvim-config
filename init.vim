@@ -23,11 +23,6 @@ let g:airline_solarized_bg='dark'
 
 au BufRead,BufNewFile *.qbs set filetype=qbs
 
-augroup project
-  autocmd!
-  autocmd BufRead,BufNewFile *.h,*.hpp,*.cpp,*.cxx set filetype=cpp.doxygen
-augroup END
-
 set keymap=russian-jcukenwin
 set iminsert=0
 set imsearch=-1
