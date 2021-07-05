@@ -43,3 +43,6 @@
 [submodule "pack/airblade/start/vim-gitgutter"]
 	path = pack/airblade/start/vim-gitgutter
 	url = https://github.com/airblade/vim-gitgutter
+[submodule "bundle/vim-gtest"]
+	path = bundle/vim-gtest
+	url = https://github.com/alepez/vim-gtest
