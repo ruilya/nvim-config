@@ -76,7 +76,7 @@ set cinoptions=g-4
 
 set autowrite
 
-let g:clang_format#command = "clang-format-10"
+let g:clang_format#command = "clang-format-11"
 
 let g:gitgutter_max_signs = 1500
 
