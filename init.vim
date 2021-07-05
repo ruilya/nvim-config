@@ -80,4 +80,6 @@ let g:clang_format#command = "clang-format-11"
 
 let g:gitgutter_max_signs = 1500
 
+let $GTEST_COLOR=0
+
 autocmd FileType yaml setlocal shiftwidth=2 tabstop=2
