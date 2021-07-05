@@ -46,3 +46,6 @@
 [submodule "bundle/vim-gtest"]
 	path = bundle/vim-gtest
 	url = https://github.com/alepez/vim-gtest
+[submodule "pack/tpope/start/fugitive-gitlab"]
+	path = pack/tpope/start/fugitive-gitlab
+	url = https://github.com/shumphrey/fugitive-gitlab.vim
