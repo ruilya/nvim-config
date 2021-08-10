@@ -1,6 +1,14 @@
 let g:nvim_conf = fnamemodify(expand("$MYVIMRC"), ":p:h")
 let &runtimepath = &runtimepath . ',' . nvim_conf . '/bundle/vim-pathogen'
 
+call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
+
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+
+call plug#end()
+
+let g:neomake_open_list = 2
+
 execute pathogen#infect()
 syntax on
 filetype plugin indent on
