@@ -57,8 +57,6 @@ set mouse=a
 
 nnoremap <leader>jd :YcmCompleter GoTo<CR>
 
-let g:ycm_clangd_binary_path = "/usr/bin/clangd-11"
-
 set hidden
 set textwidth=80
 
