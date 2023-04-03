@@ -68,6 +68,8 @@ let g:cmake_project_generator = "Ninja"
 let g:cmake_usr_args = "-C ~/.cmake_defs.cmake"
 
 nnoremap m<Space> :make<CR>
+autocmd FileType go nmap <leader>b  <Plug>(go-build)
+autocmd FileType go nmap <leader>gt <Plug>(go-test)
 
 set scrolloff=5
 
