@@ -7,9 +7,6 @@
 [submodule "bundle/lightline.vim"]
 	path = bundle/lightline.vim
 	url = https://github.com/itchyny/lightline.vim
-[submodule "bundle/vim-fugitive"]
-	path = bundle/vim-fugitive
-	url = https://github.com/tpope/vim-fugitive
 [submodule "bundle/vim-gutentags"]
 	path = bundle/vim-gutentags
 	url = https://github.com/ludovicchabant/vim-gutentags
@@ -22,9 +19,6 @@
 [submodule "bundle/YouCompleteMe"]
 	path = bundle/YouCompleteMe
 	url = https://github.com/ycm-core/YouCompleteMe
-[submodule "pack/tpope/start/vim-fugitive"]
-	path = pack/tpope/start/vim-fugitive
-	url = https://github.com/tpope/vim-fugitive
 [submodule "bundle/cmake4vim"]
 	path = bundle/cmake4vim
 	url = https://github.com/ilyachur/cmake4vim
