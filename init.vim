@@ -54,6 +54,8 @@ set cursorline
 "set list
 "set listchars=tab:>-,trail:¬,nbsp:+
 
+let g:go_doc_popup_window = 1
+
 "" Uncomment the following to have Vim jump to the last position when
 " reopening a file
 if has("autocmd")
