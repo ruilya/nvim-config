@@ -11,6 +11,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'nvim-lua/plenary.nvim' " telescope dependency
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.2' }
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'ishan9299/nvim-solarized-lua'
 
 call plug#end()
 
@@ -27,7 +28,8 @@ let g:airline_detect_iminsert=1
 let g:airline#extensions#keymap#enabled = 0
 
 set termguicolors
-colorscheme NeoSolarized
+"colorscheme NeoSolarized
+colorscheme solarized
 set background=dark
 
 set shiftwidth=4
