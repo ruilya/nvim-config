@@ -45,8 +45,8 @@ set colorcolumn=80
 set cursorcolumn
 set cursorline
 
-set list
-set listchars=tab:>-,trail:¬,nbsp:+
+"set list
+"set listchars=tab:>-,trail:¬,nbsp:+
 
 "" Uncomment the following to have Vim jump to the last position when
 " reopening a file
