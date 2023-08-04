@@ -13,6 +13,8 @@ Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.2' }
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} " telescope dependency
 Plug 'ishan9299/nvim-solarized-lua'
 
+Plug 'rcarriga/nvim-notify'
+
 call plug#end()
 
 let g:neomake_open_list = 2
@@ -123,6 +125,8 @@ nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
 lua << EOF
+require('telescope').load_extension('notify')
+
 require'nvim-treesitter.configs'.setup {
   -- A list of parser names, or "all" (the five listed parsers should always be installed)
   ensure_installed = { "c", "cpp", "bash", "go", "lua", "vim", "vimdoc", "query" },
