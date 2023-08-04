@@ -84,6 +84,7 @@ set scrolloff=5
 
 let g:clang_format#detect_style_file=1
 let g:clang_format#enable_fallback_style=0
+let g:clang_format#auto_format=1
 autocmd FileType c,cpp,objc,proto nnoremap <buffer><Leader>cf :<C-u>ClangFormat<CR>
 autocmd FileType c,cpp,objc,proto vnoremap <buffer><Leader>cf :ClangFormat<CR>
 
