@@ -21,6 +21,7 @@ execute pathogen#infect()
 syntax on
 filetype plugin indent on
 set fencs=utf8,cp1251
+set splitright
 
 let g:airline#extensions#xkblayout#enabled = 0
 let g:airline_powerline_fonts = 1
