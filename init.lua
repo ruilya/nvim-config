@@ -12,27 +12,16 @@ call plug#end()
 execute pathogen#infect()
 
 set fencs=utf8,cp1251
-set splitright
-set termguicolors
 set background=dark
 set shiftwidth=4
-set expandtab
 set keymap=russian-jcukenwin
 set iminsert=0
 set imsearch=-1
-set undofile
-set ignorecase
-set smartcase
 set colorcolumn=80
-set cursorcolumn
-set cursorline
-set title
 set mouse=a
-set hidden
 set textwidth=80
 set scrolloff=5
 set cinoptions=g-4
-set autowrite
 
 au BufRead,BufNewFile *.qbs set filetype=qbs
 
