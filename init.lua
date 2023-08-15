@@ -18,15 +18,14 @@ let g:airline#extensions#xkblayout#enabled = 0
 let g:airline_powerline_fonts = 1
 let g:airline_detect_iminsert=1
 let g:airline#extensions#keymap#enabled = 0
+let g:airline_theme='solarized'
+let g:airline_solarized_bg='dark'
 
 set termguicolors
 set background=dark
 
 set shiftwidth=4
 set expandtab
-
-let g:airline_theme='solarized'
-let g:airline_solarized_bg='dark'
 
 au BufRead,BufNewFile *.qbs set filetype=qbs
 
