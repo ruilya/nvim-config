@@ -9,8 +9,6 @@ call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
 
 call plug#end()
 
-let g:neomake_open_list = 2
-
 execute pathogen#infect()
 
 set fencs=utf8,cp1251
