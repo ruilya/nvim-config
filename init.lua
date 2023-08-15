@@ -10,8 +10,6 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 Plug 'ishan9299/nvim-solarized-lua'
 
-Plug 'rcarriga/nvim-notify'
-
 call plug#end()
 
 let g:neomake_open_list = 2
