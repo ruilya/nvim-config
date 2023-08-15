@@ -13,30 +13,31 @@ let g:neomake_open_list = 2
 
 execute pathogen#infect()
 filetype plugin indent on
+
 set fencs=utf8,cp1251
 set splitright
-
 set termguicolors
 set background=dark
-
 set shiftwidth=4
 set expandtab
-
-au BufRead,BufNewFile *.qbs set filetype=qbs
-
 set keymap=russian-jcukenwin
 set iminsert=0
 set imsearch=-1
-
 set undofile
 set ignorecase
 set smartcase
 set colorcolumn=80
 set cursorcolumn
 set cursorline
+set title
+set mouse=a
+set hidden
+set textwidth=80
+set scrolloff=5
+set cinoptions=g-4
+set autowrite
 
-"set list
-"set listchars=tab:>-,trail:¬,nbsp:+
+au BufRead,BufNewFile *.qbs set filetype=qbs
 
 let g:go_doc_popup_window = 1
 
@@ -46,14 +47,7 @@ if has("autocmd")
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
 
-set title
-
-set mouse=a
-
 nnoremap <leader>jd :YcmCompleter GoTo<CR>
-
-set hidden
-set textwidth=80
 
 let g:cmake_compile_commands = 1
 let g:cmake_project_generator = "Ninja"
@@ -63,8 +57,6 @@ nnoremap m<Space> :make<CR>
 autocmd FileType go nmap <leader>b  <Plug>(go-build)
 autocmd FileType go nmap <leader>gt <Plug>(go-test)
 
-set scrolloff=5
-
 let g:clang_format#detect_style_file=1
 let g:clang_format#enable_fallback_style=0
 let g:clang_format#auto_format=1
@@ -72,10 +64,6 @@ autocmd FileType c,cpp,objc,proto nnoremap <buffer><Leader>cf :<C-u>ClangFormat<
 autocmd FileType c,cpp,objc,proto vnoremap <buffer><Leader>cf :ClangFormat<CR>
 
 command Vg vertical G
-
-set cinoptions=g-4
-
-set autowrite
 
 let g:clang_format#command = "clang-format"
 
