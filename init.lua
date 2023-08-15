@@ -1,4 +1,5 @@
 vim.cmd([[
+let g:pathogen_disabled = ['vim-airline']
 let g:nvim_conf = fnamemodify(expand("$MYVIMRC"), ":p:h")
 let &runtimepath = &runtimepath . ',' . nvim_conf . '/bundle/vim-pathogen'
 
