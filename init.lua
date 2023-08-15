@@ -1,5 +1,4 @@
 vim.cmd([[
-let g:pathogen_disabled = ['vim-airline']
 let g:nvim_conf = fnamemodify(expand("$MYVIMRC"), ":p:h")
 let &runtimepath = &runtimepath . ',' . nvim_conf . '/bundle/vim-pathogen'
 
@@ -14,13 +13,6 @@ syntax on
 filetype plugin indent on
 set fencs=utf8,cp1251
 set splitright
-
-let g:airline#extensions#xkblayout#enabled = 0
-let g:airline_powerline_fonts = 1
-let g:airline_detect_iminsert=1
-let g:airline#extensions#keymap#enabled = 0
-let g:airline_theme='solarized'
-let g:airline_solarized_bg='dark'
 
 set termguicolors
 set background=dark
@@ -172,6 +164,53 @@ require("lazy").setup{
     },
     { "fatih/vim-go", },
     { "ishan9299/nvim-solarized-lua" },
+    {
+        "nvim-lualine/lualine.nvim",
+        dependencies = {
+            "nvim-tree/nvim-web-devicons",
+        },
+    }
+}
+
+require('lualine').setup {
+  options = {
+    icons_enabled = false,
+    theme = 'solarized_dark',
+    component_separators = { left = '', right = ''},
+    section_separators = { left = '', right = ''},
+    disabled_filetypes = {
+      statusline = {},
+      winbar = {},
+    },
+    ignore_focus = {},
+    always_divide_middle = true,
+    globalstatus = false,
+    refresh = {
+      statusline = 1000,
+      tabline = 1000,
+      winbar = 1000,
+    }
+  },
+  sections = {
+    lualine_a = {'mode'},
+    lualine_b = {'branch', 'diagnostics'},
+    lualine_c = {'filename'},
+    lualine_x = {'encoding', 'fileformat', 'filetype'},
+    lualine_y = {'progress'},
+    lualine_z = {'location'}
+  },
+  inactive_sections = {
+    lualine_a = {},
+    lualine_b = {},
+    lualine_c = {'filename'},
+    lualine_x = {'location'},
+    lualine_y = {},
+    lualine_z = {}
+  },
+  tabline = {},
+  winbar = {},
+  inactive_winbar = {},
+  extensions = {}
 }
 
 vim.cmd('colorscheme solarized')
