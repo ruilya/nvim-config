@@ -7,11 +7,8 @@ call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 Plug 'williamboman/mason.nvim' " no idea why i'm using that
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-Plug 'tpope/vim-fugitive'
 
-Plug 'nvim-lua/plenary.nvim' " telescope dependency
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.2' }
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} " telescope dependency
 Plug 'ishan9299/nvim-solarized-lua'
 
 Plug 'rcarriga/nvim-notify'
@@ -144,7 +141,45 @@ endfunction
 map <F3> :call Toggle_ycm() <CR>
 ]])
 
-require('telescope').load_extension('notify')
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable", -- latest stable release
+    lazypath,
+  })
+end
+vim.opt.rtp:prepend(lazypath)
+
+-- Example using a list of specs with the default options
+vim.g.mapleader = "\\" -- Make sure to set `mapleader` before lazy so your mappings are correct
+
+require("lazy").setup{
+    { "tpope/vim-fugitive", },
+    { "nvim-treesitter/nvim-treesitter",
+        build = ":TSUpdate",
+        config = function()
+            require("nvim-treesitter.configs").setup {
+                ensure_installed = { "c", "lua", "rust" },
+                highlight = { enable = true, }
+            }
+        end },
+    { "nvim-telescope/telescope.nvim",
+       tag = "0.1.2",
+    dependencies = "nvim-lua/plenary.nvim",
+    keys = {
+        { "<C-t>", "<CMD>Telescope<CR>", mode = { "n", "i", "v" } },
+        { "<C-p>", "<CMD>Telescope find_files<CR>", mode = { "n", "i", "v" } },
+        { "<C-l>", "<CMD>Telescope live_grep<CR>", mode = { "n", "i", "v" } },
+        { "<C-c>", "<CMD>Telescope commands<CR>", mode = { "n", "i", "v" } },
+        { "<C-k>", "<CMD>Telescope keymaps<CR>", mode = { "n", "i", "v" } },
+        { "<C-s>", "<CMD>Telescope grep_string<CR>", mode = { "n", "i", "v" } },
+    },
+    config = true },
+}
 
 require'nvim-treesitter.configs'.setup {
   -- A list of parser names, or "all" (the five listed parsers should always be installed)
@@ -190,30 +225,3 @@ require'nvim-treesitter.configs'.setup {
     additional_vim_regex_highlighting = false,
   },
 }
-
-local ensure_packer = function()
-  local fn = vim.fn
-  local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
-  if fn.empty(fn.glob(install_path)) > 0 then
-    fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
-    vim.cmd [[packadd packer.nvim]]
-    return true
-  end
-  return false
-end
-
-local packer_bootstrap = ensure_packer()
-
-return require('packer').startup(function(use)
-  use 'wbthomason/packer.nvim'
-  -- My plugins here
-  -- use 'foo1/bar1.nvim'
-  -- use 'foo2/bar2.nvim'
-
-  -- Automatically set up your configuration after cloning packer.nvim
-  -- Put this at the end after all plugins
-  if packer_bootstrap then
-    require('packer').sync()
-  end
-end)
--- packer bootstrap end
