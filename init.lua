@@ -12,7 +12,6 @@ call plug#end()
 let g:neomake_open_list = 2
 
 execute pathogen#infect()
-filetype plugin indent on
 
 set fencs=utf8,cp1251
 set splitright
