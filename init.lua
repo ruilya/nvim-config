@@ -17,17 +17,7 @@ au BufRead,BufNewFile *.qbs set filetype=qbs
 
 let g:go_doc_popup_window = 1
 
-"" Uncomment the following to have Vim jump to the last position when
-" reopening a file
-if has("autocmd")
-  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
-endif
-
 nnoremap <leader>jd :YcmCompleter GoTo<CR>
-
-let g:cmake_compile_commands = 1
-let g:cmake_project_generator = "Ninja"
-let g:cmake_usr_args = "-C ~/.cmake_defs.cmake"
 
 nnoremap m<Space> :make<CR>
 autocmd FileType go nmap <leader>b  <Plug>(go-build)
