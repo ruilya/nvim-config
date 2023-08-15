@@ -13,18 +13,6 @@ call plug#end()
 
 execute pathogen#infect()
 
-set fencs=utf8,cp1251
-set background=dark
-set shiftwidth=4
-set keymap=russian-jcukenwin
-set iminsert=0
-set imsearch=-1
-set colorcolumn=80
-set mouse=a
-set textwidth=80
-set scrolloff=5
-set cinoptions=g-4
-
 au BufRead,BufNewFile *.qbs set filetype=qbs
 
 let g:go_doc_popup_window = 1

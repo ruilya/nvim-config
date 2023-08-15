@@ -11,3 +11,15 @@ vim.o.cursorline = true
 vim.o.title = true
 vim.o.hidden = true
 vim.o.autowrite = true
+
+vim.o.background = 'dark'
+vim.o.keymap = 'russian-jcukenwin'
+vim.o.fencs = 'utf8,cp1251'
+vim.o.shiftwidth = 4
+vim.o.iminsert = 0
+vim.o.imsearch = -1
+vim.o.colorcolumn = 80
+vim.o.mouse = 'a'
+vim.o.textwidth = 80
+vim.o.scrolloff = 5
+vim.o.cinoptions = 'g-4'
