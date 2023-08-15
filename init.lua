@@ -4,7 +4,6 @@ let &runtimepath = &runtimepath . ',' . nvim_conf . '/bundle/vim-pathogen'
 
 call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
 
-Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 Plug 'williamboman/mason.nvim' " no idea why i'm using that
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
@@ -172,6 +171,12 @@ require("lazy").setup{
         { "<C-s>", "<CMD>Telescope grep_string<CR>", mode = { "n", "i", "v" } },
     },
     config = true },
+    {
+    "iamcco/markdown-preview.nvim",
+    config = function()
+      vim.fn["mkdp#util#install"]()
+    end,
+    },
 }
 
 require'nvim-treesitter.configs'.setup {
