@@ -1,5 +1,6 @@
 require('core/lazy')
-require('plugins')
+require('plugins/lualine')
+require('plugins/nvim-treesitter')
 require('settings')
 
 vim.cmd([[
