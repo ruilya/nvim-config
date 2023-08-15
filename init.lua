@@ -117,10 +117,10 @@ augroup GTest
 augroup END
 
 " Find files using Telescope command-line sugar.
-nnoremap <leader>ff <cmd>Telescope find_files<cr>
-nnoremap <leader>fg <cmd>Telescope live_grep<cr>
-nnoremap <leader>fb <cmd>Telescope buffers<cr>
-nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+"nnoremap <leader>ff <cmd>Telescope find_files<cr>
+"nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+"nnoremap <leader>fb <cmd>Telescope buffers<cr>
+"nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
 "Toggle YouCompleteMe on and off with F3
 function Toggle_ycm()
@@ -172,9 +172,11 @@ require("lazy").setup{
     dependencies = "nvim-lua/plenary.nvim",
     keys = {
         { "<C-t>", "<CMD>Telescope<CR>", mode = { "n", "i", "v" } },
-        { "<C-p>", "<CMD>Telescope find_files<CR>", mode = { "n", "i", "v" } },
-        { "<C-l>", "<CMD>Telescope live_grep<CR>", mode = { "n", "i", "v" } },
-        { "<C-c>", "<CMD>Telescope commands<CR>", mode = { "n", "i", "v" } },
+        { "<leader>ff", "<CMD>Telescope find_files<CR>", mode = { "n", "i", "v" } },
+        { "<leader>fg", "<CMD>Telescope live_grep<CR>", mode = { "n", "i", "v" } },
+        { "<leader>fb", "<CMD>Telescope buffers<CR>", mode = { "n", "i", "v" } },
+        { "<leader>fh", "<CMD>Telescope help_tags<CR>", mode = { "n", "i", "v" } },
+        --{ "<C-c>", "<CMD>Telescope commands<CR>", mode = { "n", "i", "v" } },
         { "<C-k>", "<CMD>Telescope keymaps<CR>", mode = { "n", "i", "v" } },
         { "<C-s>", "<CMD>Telescope grep_string<CR>", mode = { "n", "i", "v" } },
     },
