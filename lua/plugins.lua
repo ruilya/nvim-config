@@ -95,8 +95,6 @@ require('lualine').setup {
   extensions = {}
 }
 
-vim.cmd('colorscheme solarized')
-
 require'nvim-treesitter.configs'.setup {
   -- A list of parser names, or "all" (the five listed parsers should always be installed)
   ensure_installed = { "c", "cpp", "bash", "go", "lua", "vim", "vimdoc", "query" },
