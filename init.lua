@@ -125,7 +125,25 @@ nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
-lua << EOF
+"Toggle YouCompleteMe on and off with F3
+function Toggle_ycm()
+    if g:ycm_show_diagnostics_ui == 0
+        let g:ycm_auto_trigger = 1
+        let g:ycm_show_diagnostics_ui = 1
+        :YcmRestartServer
+        :e
+        :echo "YCM on"
+    elseif g:ycm_show_diagnostics_ui == 1
+        let g:ycm_auto_trigger = 0
+        let g:ycm_show_diagnostics_ui = 0
+        :YcmRestartServer
+        :e
+        :echo "YCM off"
+    endif
+endfunction
+map <F3> :call Toggle_ycm() <CR>
+]])
+
 require('telescope').load_extension('notify')
 
 require'nvim-treesitter.configs'.setup {
@@ -172,23 +190,3 @@ require'nvim-treesitter.configs'.setup {
     additional_vim_regex_highlighting = false,
   },
 }
-EOF
-
-"Toggle YouCompleteMe on and off with F3
-function Toggle_ycm()
-    if g:ycm_show_diagnostics_ui == 0
-        let g:ycm_auto_trigger = 1
-        let g:ycm_show_diagnostics_ui = 1
-        :YcmRestartServer
-        :e
-        :echo "YCM on"
-    elseif g:ycm_show_diagnostics_ui == 1
-        let g:ycm_auto_trigger = 0
-        let g:ycm_show_diagnostics_ui = 0
-        :YcmRestartServer
-        :e
-        :echo "YCM off"
-    endif
-endfunction
-map <F3> :call Toggle_ycm() <CR>
-]])
