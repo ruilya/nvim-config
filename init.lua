@@ -1,3 +1,4 @@
+vim.cmd([[
 let g:nvim_conf = fnamemodify(expand("$MYVIMRC"), ":p:h")
 let &runtimepath = &runtimepath . ',' . nvim_conf . '/bundle/vim-pathogen'
 
@@ -190,3 +191,4 @@ function Toggle_ycm()
     endif
 endfunction
 map <F3> :call Toggle_ycm() <CR>
+]])
