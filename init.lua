@@ -4,7 +4,6 @@ let &runtimepath = &runtimepath . ',' . nvim_conf . '/bundle/vim-pathogen'
 
 call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
 
-Plug 'williamboman/mason.nvim' " no idea why i'm using that
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 Plug 'ishan9299/nvim-solarized-lua'
