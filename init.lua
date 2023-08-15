@@ -4,8 +4,6 @@ let &runtimepath = &runtimepath . ',' . nvim_conf . '/bundle/vim-pathogen'
 
 call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
 
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-
 Plug 'ishan9299/nvim-solarized-lua'
 
 call plug#end()
@@ -176,6 +174,7 @@ require("lazy").setup{
       vim.fn["mkdp#util#install"]()
     end,
     },
+    { "fatih/vim-go", },
 }
 
 require'nvim-treesitter.configs'.setup {
