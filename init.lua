@@ -4,8 +4,6 @@ let &runtimepath = &runtimepath . ',' . nvim_conf . '/bundle/vim-pathogen'
 
 call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
 
-Plug 'ishan9299/nvim-solarized-lua'
-
 call plug#end()
 
 let g:neomake_open_list = 2
@@ -22,8 +20,6 @@ let g:airline_detect_iminsert=1
 let g:airline#extensions#keymap#enabled = 0
 
 set termguicolors
-"colorscheme NeoSolarized
-colorscheme solarized
 set background=dark
 
 set shiftwidth=4
@@ -175,7 +171,10 @@ require("lazy").setup{
     end,
     },
     { "fatih/vim-go", },
+    { "ishan9299/nvim-solarized-lua" },
 }
+
+vim.cmd('colorscheme solarized')
 
 require'nvim-treesitter.configs'.setup {
   -- A list of parser names, or "all" (the five listed parsers should always be installed)
