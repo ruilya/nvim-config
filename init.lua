@@ -8,7 +8,6 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': 
 Plug 'williamboman/mason.nvim' " no idea why i'm using that
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
-Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.2' }
 Plug 'ishan9299/nvim-solarized-lua'
 
 Plug 'rcarriga/nvim-notify'
@@ -115,12 +114,6 @@ augroup GTest
         autocmd FileType cpp nnoremap <silent> <leader>tj :GTestJump<CR>
         autocmd FileType cpp nnoremap          <leader>ti :GTestNewTest<CR>i
 augroup END
-
-" Find files using Telescope command-line sugar.
-"nnoremap <leader>ff <cmd>Telescope find_files<cr>
-"nnoremap <leader>fg <cmd>Telescope live_grep<cr>
-"nnoremap <leader>fb <cmd>Telescope buffers<cr>
-"nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
 "Toggle YouCompleteMe on and off with F3
 function Toggle_ycm()
