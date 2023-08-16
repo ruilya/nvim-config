@@ -16,6 +16,7 @@ vim.g.mapleader = "\\" -- Make sure to set `mapleader` before lazy so your mappi
 
 require("lazy").setup{
     { "tpope/vim-fugitive", },
+    { "shumphrey/fugitive-gitlab.vim" },
     { "nvim-treesitter/nvim-treesitter",
         build = ":TSUpdate",
         config = function()
