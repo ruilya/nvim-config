@@ -34,8 +34,6 @@ command Vg vertical G
 
 let g:clang_format#command = "clang-format"
 
-let g:gitgutter_max_signs = 1500
-
 let $GTEST_COLOR=0
 let $GTEST_BRIEF=1
 
