@@ -10,9 +10,6 @@
 [submodule "bundle/vim-clang-format"]
 	path = bundle/vim-clang-format
 	url = https://github.com/rhysd/vim-clang-format
-[submodule "pack/airblade/start/vim-gitgutter"]
-	path = pack/airblade/start/vim-gitgutter
-	url = https://github.com/airblade/vim-gitgutter
 [submodule "bundle/vim-gtest"]
 	path = bundle/vim-gtest
 	url = https://github.com/alepez/vim-gtest
