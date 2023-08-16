@@ -4,6 +4,3 @@
 [submodule "bundle/YouCompleteMe"]
 	path = bundle/YouCompleteMe
 	url = https://github.com/ycm-core/YouCompleteMe
-[submodule "bundle/vim-gtest"]
-	path = bundle/vim-gtest
-	url = https://github.com/alepez/vim-gtest
