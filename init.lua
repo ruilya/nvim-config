@@ -14,7 +14,7 @@ call plug#end()
 
 execute pathogen#infect()
 
-au BufRead,BufNewFile *.qbs set filetype=qbs
+autocmd BufRead,BufNewFile *.qbs set filetype=qbs
 
 let g:go_doc_popup_window = 1
 
