@@ -8,10 +8,6 @@ vim.cmd([[
 let g:nvim_conf = fnamemodify(expand("$MYVIMRC"), ":p:h")
 let &runtimepath = &runtimepath . ',' . nvim_conf . '/bundle/vim-pathogen'
 
-call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
-
-call plug#end()
-
 execute pathogen#infect()
 
 autocmd BufRead,BufNewFile *.qbs set filetype=qbs
