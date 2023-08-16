@@ -7,9 +7,6 @@
 [submodule "bundle/qbs.vim"]
 	path = bundle/qbs.vim
 	url = https://bitbucket.org/JohnKaul/qbs.vim
-[submodule "bundle/vim-clang-format"]
-	path = bundle/vim-clang-format
-	url = https://github.com/rhysd/vim-clang-format
 [submodule "bundle/vim-gtest"]
 	path = bundle/vim-gtest
 	url = https://github.com/alepez/vim-gtest
