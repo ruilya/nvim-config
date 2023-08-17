@@ -6,6 +6,7 @@ require('plugins/mason')
 require('plugins/mason-lspconfig')
 require('plugins/lspconfig')
 -- require('plugins/cmp')
+require('plugins/gonvim')
 require('settings')
 require('autocommands')
 
