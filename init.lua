@@ -2,7 +2,12 @@ require('core/lazy')
 require('plugins/lualine')
 require('plugins/nvim-treesitter')
 require('plugins/gitsigns')
+require('plugins/mason')
+require('plugins/mason-lspconfig')
+require('plugins/lspconfig')
+-- require('plugins/cmp')
 require('settings')
+require('autocommands')
 
 vim.cmd([[
 let g:nvim_conf = fnamemodify(expand("$MYVIMRC"), ":p:h")

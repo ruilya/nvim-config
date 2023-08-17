@@ -45,7 +45,7 @@ require("lazy").setup{
       vim.fn["mkdp#util#install"]()
     end,
     },
-    { "fatih/vim-go", },
+    -- { "fatih/vim-go", },
     { "ishan9299/nvim-solarized-lua" },
     {
         "nvim-lualine/lualine.nvim",
@@ -64,5 +64,13 @@ require("lazy").setup{
             version = "2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
             -- install jsregexp (optional!).
             build = "make install_jsregexp"
-    }
+    },
+    { "williamboman/mason.nvim" },
+    { "williamboman/mason-lspconfig.nvim" },
+    { "neovim/nvim-lspconfig" },
+    -- { "hrsh7th/cmp-nvim-lsp" },
+    -- { "hrsh7th/cmp-buffer" },
+    -- { "hrsh7th/cmp-path" },
+    -- { "hrsh7th/cmp-cmdline" },
+    -- { "hrsh7th/nvim-cmp" },
 }
