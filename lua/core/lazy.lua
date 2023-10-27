@@ -35,6 +35,8 @@ require("lazy").setup{
            { "<leader>tfg", "<CMD>Telescope live_grep<CR>", mode = { "n", "i", "v" } },
            { "<leader>tfb", "<CMD>Telescope buffers<CR>", mode = { "n", "i", "v" } },
            { "<leader>tfh", "<CMD>Telescope help_tags<CR>", mode = { "n", "i", "v" } },
+           { "<leader>tgb", "<CMD>Telescope git_branches<CR>", mode = { "n", "i", "v" } },
+           { "<leader>tgs", "<CMD>Telescope git_status<CR>", mode = { "n", "i", "v" } },
            --{ "<C-c>", "<CMD>Telescope commands<CR>", mode = { "n", "i", "v" } },
            { "<C-k>", "<CMD>Telescope keymaps<CR>", mode = { "n", "i", "v" } },
            { "<C-s>", "<CMD>Telescope grep_string<CR>", mode = { "n", "i", "v" } },
