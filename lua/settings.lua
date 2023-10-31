@@ -23,3 +23,7 @@ vim.o.mouse = 'a'
 vim.o.textwidth = 80
 vim.o.scrolloff = 5
 vim.o.cinoptions = 'g-4'
+
+vim.o.foldlevel = 99
+vim.o.foldmethod = 'expr'
+vim.o.foldexpr='nvim_treesitter#foldexpr()'
