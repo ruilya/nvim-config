@@ -70,4 +70,5 @@ require("lazy").setup{
             build = "make install_jsregexp"
     },
     {'akinsho/toggleterm.nvim', version = "*", config = true},
+    {'nvim-tree/nvim-web-devicons'},
 }
