@@ -1,4 +1,5 @@
 require('core/lazy')
+require('core/keymaps')
 require('plugins/lualine')
 require('plugins/nvim-treesitter')
 require('plugins/gitsigns')
