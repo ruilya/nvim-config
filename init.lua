@@ -1,9 +1,11 @@
 require('core/lazy')
 require('core/keymaps')
+require('plugins/lspconfig')
 require('plugins/lualine')
 require('plugins/nvim-treesitter')
 require('plugins/gitsigns')
 require('plugins/toggleterm')
+require('plugins/go-nvim')
 require('settings')
 
 vim.cmd([[
@@ -14,13 +16,9 @@ execute pathogen#infect()
 
 autocmd BufRead,BufNewFile *.qbs set filetype=qbs
 
-let g:go_doc_popup_window = 1
-
 nnoremap <leader>jd :YcmCompleter GoTo<CR>
 
 nnoremap m<Space> :make<CR>
-autocmd FileType go nmap <leader>b  <Plug>(go-build)
-autocmd FileType go nmap <leader>gt <Plug>(go-test)
 
 let g:clang_format#detect_style_file=1
 let g:clang_format#enable_fallback_style=0
