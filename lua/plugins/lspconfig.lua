@@ -1,6 +1,7 @@
 local lspconfig = require("lspconfig")
 -- Setup language servers.
 lspconfig.gopls.setup({})
+require'lspconfig'.clangd.setup{}
 
 
 -- Global mappings.
