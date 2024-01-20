@@ -7,6 +7,7 @@ require('plugins/gitsigns')
 require('plugins/toggleterm')
 require('plugins/go-nvim')
 require('plugins/cmp')
+require('plugins/lspkind')
 require('settings')
 
 vim.cmd([[
