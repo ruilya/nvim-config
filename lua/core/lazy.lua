@@ -57,7 +57,10 @@ require("lazy").setup{
         "nvim-treesitter/nvim-treesitter",
       },
       config = function()
-        require("go").setup()
+        require("go").setup({
+          verbose = true,  -- output loginf in messages
+          log_path = vim.fn.expand("$HOME") .. "/.cache/nvim/gonvim.log",
+        })
       end,
       event = {"CmdlineEnter"},
       ft = {"go", 'gomod'},
