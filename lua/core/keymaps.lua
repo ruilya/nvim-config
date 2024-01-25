@@ -9,3 +9,6 @@ end
 --map('n', '<leader>rr', '<Plug>RestNvim')
 --map('n', '<leader>rp', '<Plug>RestNvimPreview')
 --map('n', '<leader>rl', '<Plug>RestNvimLast')
+
+-- quickly write file
+map('n', 'ZS', ':update<CR>')
