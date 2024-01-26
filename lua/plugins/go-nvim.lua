@@ -9,3 +9,4 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 })
 
 vim.keymap.set('n', '<leader>b', ':GoBuild %:h<CR>')
+vim.keymap.set('n', '<leader>gt', ':GoTestPkg<CR>')
