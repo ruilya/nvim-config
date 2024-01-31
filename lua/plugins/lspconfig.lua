@@ -8,8 +8,9 @@ lspconfig.gopls.setup({
   settings = {
     gopls = {
       analyses = {
-        unusedparams = true,
         shadow = true,
+        unusedwrite = true,
+        unusedvariable = true,
       },
       staticcheck = true,
       gofumpt = true,
