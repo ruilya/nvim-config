@@ -94,5 +94,20 @@ require("lazy").setup{
     {'hrsh7th/cmp-cmdline'},
     {'hrsh7th/nvim-cmp'},
     { 'saadparwaiz1/cmp_luasnip' }, -- Snippets source for nvim-cmp
-    { 'L3MON4D3/LuaSnip' }, -- Snippets plugin
+    { "SmiteshP/nvim-navbuddy" },
+    {
+        "neovim/nvim-lspconfig",
+        dependencies = {
+            {
+                "SmiteshP/nvim-navbuddy",
+                dependencies = {
+                    "SmiteshP/nvim-navic",
+                    "MunifTanjim/nui.nvim",
+                    "numToStr/Comment.nvim",        -- Optional
+                    "nvim-telescope/telescope.nvim", -- Optional
+                },
+                opts = { lsp = { auto_attach = true } },
+            },
+        },
+    },
 }

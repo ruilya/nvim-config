@@ -12,3 +12,5 @@ end
 
 -- quickly write file
 map('n', 'ZS', ':update<CR>')
+
+vim.keymap.set('n',  '<leader>n', require("nvim-navbuddy").open, {noremap=true})
