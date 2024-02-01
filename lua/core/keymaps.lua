@@ -13,4 +13,5 @@ end
 -- quickly write file
 map('n', 'ZS', ':update<CR>')
 
+vim.api.nvim_set_keymap('n', '<leader>a', ':NvimCmpToggle<CR>', { noremap = true, silent = true })
 vim.keymap.set('n',  '<leader>n', require("nvim-navbuddy").open, {noremap=true})

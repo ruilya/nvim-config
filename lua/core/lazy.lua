@@ -110,4 +110,10 @@ require("lazy").setup{
             },
         },
     },
+    {
+        'gitaarik/nvim-cmp-toggle',
+        dependencies = {
+            'hrsh7th/nvim-cmp'
+        },
+    },
 }
