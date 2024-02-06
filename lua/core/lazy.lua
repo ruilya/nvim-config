@@ -18,6 +18,7 @@ require("lazy").setup{
     { "tpope/vim-fugitive", },
     { "shumphrey/fugitive-gitlab.vim" },
     { "nvim-treesitter/nvim-treesitter",
+        tag = "v0.9.2",
         build = ":TSUpdate",
         config = function()
             require("nvim-treesitter.configs").setup {
