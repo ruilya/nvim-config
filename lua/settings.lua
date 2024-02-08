@@ -27,3 +27,5 @@ vim.o.cinoptions = 'g-4'
 vim.o.foldlevel = 99
 vim.o.foldmethod = 'expr'
 vim.o.foldexpr='nvim_treesitter#foldexpr()'
+
+vim.g.netrw_banner = '0'
