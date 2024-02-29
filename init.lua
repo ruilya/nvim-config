@@ -9,6 +9,7 @@ require('plugins/go-nvim')
 require('plugins/cmp')
 require('plugins/lspkind')
 require('plugins/navbuddy')
+require('plugins/telescope')
 require('settings')
 
 vim.cmd([[
