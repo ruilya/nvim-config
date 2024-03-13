@@ -11,6 +11,8 @@ lspconfig.gopls.setup({
         shadow = true,
         unusedwrite = true,
         unusedvariable = true,
+        unusedparams = true,
+        nilness = true,
       },
       staticcheck = true,
       gofumpt = true,
