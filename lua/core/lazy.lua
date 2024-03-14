@@ -50,6 +50,13 @@ require("lazy").setup{
           vim.fn["mkdp#util#install"]()
         end,
     },
+--    {
+--        "crispgm/nvim-go",
+--        dependencies = {
+--            "nvim-lua/plenary.nvim",
+--            "rcarriga/nvim-notify",
+--        },
+--    },
     {
       "ray-x/go.nvim",
       dependencies = {  -- optional packages
