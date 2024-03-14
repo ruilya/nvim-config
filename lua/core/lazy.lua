@@ -124,4 +124,7 @@ require("lazy").setup{
             'hrsh7th/nvim-cmp'
         },
     },
+    {
+        'f-person/git-blame.nvim',
+    },
 }
