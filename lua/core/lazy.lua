@@ -28,12 +28,24 @@ require("lazy").setup{
         end
     },
     { "nvim-telescope/telescope.nvim",
-       tag = "0.1.2",
-       dependencies = "nvim-lua/plenary.nvim",
+       tag = "0.1.6",
+       dependencies = {
+           { 
+               "nvim-telescope/telescope-live-grep-args.nvim" ,
+               -- This will not install any breaking changes.
+               -- For major updates, this must be adjusted manually.
+               version = "^1.0.0",
+           },
+           {
+               "nvim-lua/plenary.nvim",
+           },
+       },
        keys = {
            { "<C-t>", "<CMD>Telescope<CR>", mode = { "n", "i", "v" } },
            { "<leader>tff", "<CMD>Telescope find_files<CR>", mode = { "n", "i", "v" } },
-           { "<leader>tfg", "<CMD>Telescope live_grep<CR>", mode = { "n", "i", "v" } },
+           --{ "<leader>tfg", "<CMD>Telescope live_grep<CR>", mode = { "n", "i", "v" } },
+           --keymap.set("n", "<leader>fg", ":lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>")
+           {  "<leader>tfg", "<CMD>lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>", mode = { "n" } },
            { "<leader>tfb", "<CMD>Telescope buffers<CR>", mode = { "n", "i", "v" } },
            { "<leader>tfh", "<CMD>Telescope help_tags<CR>", mode = { "n", "i", "v" } },
            { "<leader>tgb", "<CMD>Telescope git_branches<CR>", mode = { "n", "i", "v" } },
