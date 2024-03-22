@@ -139,4 +139,7 @@ require("lazy").setup{
     {
         'f-person/git-blame.nvim',
     },
+    {
+        'nvim-treesitter/nvim-treesitter-context'
+    },
 }

@@ -11,6 +11,7 @@ require('plugins/cmp')
 require('plugins/lspkind')
 require('plugins/navbuddy')
 require('plugins/telescope')
+require('plugins/treesitter-context')
 require('settings')
 
 vim.cmd([[
