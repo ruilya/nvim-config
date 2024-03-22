@@ -1,6 +1,3 @@
-vim.g.gitblame_display_virtual_text = 0 -- Disable virtual text
-local git_blame = require('gitblame')
-
 require('lualine').setup {
   options = {
     icons_enabled = true,
@@ -27,8 +24,7 @@ require('lualine').setup {
         path = 1, -- show relative path
       },
     },
-    lualine_x = { { git_blame.get_current_blame_text, cond = git_blame.is_blame_text_available },
-        'encoding', 'fileformat', 'filetype'},
+    lualine_x = { 'encoding', 'fileformat', 'filetype'},
     lualine_y = {'progress'},
     lualine_z = {'location'}
   },
