@@ -12,6 +12,7 @@ require('plugins/lspkind')
 require('plugins/navbuddy')
 require('plugins/telescope')
 require('plugins/treesitter-context')
+require('plugins/git-blame-nvim')
 require('settings')
 
 vim.cmd([[
