@@ -3,8 +3,7 @@ local git_blame = require('gitblame')
 require('lualine').setup {
   options = {
     icons_enabled = true,
-    -- theme = 'solarized_dark',
-    theme = 'NeoSolarized',
+    theme = 'solarized_dark',
     component_separators = { left = '', right = ''},
     section_separators = { left = '', right = ''},
     disabled_filetypes = {
