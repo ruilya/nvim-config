@@ -21,10 +21,11 @@ require('lualine').setup {
   },
   sections = {
     lualine_a = {'mode'},
-    lualine_b = {'branch', 'diagnostics'},
-    lualine_c = {'diff', {'filename',
+    lualine_b = {'branch', },
+    lualine_c = {'diagnostics', 'diff', {'filename',
         path = 1, -- show relative path
       },
+
     },
     lualine_x = { 
         { git_blame.get_current_blame_text, cond = git_blame.is_blame_text_available },
