@@ -62,13 +62,6 @@ require("lazy").setup{
           vim.fn["mkdp#util#install"]()
         end,
     },
---    {
---        "crispgm/nvim-go",
---        dependencies = {
---            "nvim-lua/plenary.nvim",
---            "rcarriga/nvim-notify",
---        },
---    },
     {
       "ray-x/go.nvim",
       dependencies = {  -- optional packages
@@ -80,6 +73,9 @@ require("lazy").setup{
         require("go").setup({
           verbose = true,  -- output loginf in messages
           log_path = vim.fn.expand("$HOME") .. "/.cache/nvim/gonvim.log",
+          lsp_inlay_hints = {
+            enable = false,
+          },
         })
       end,
       event = {"CmdlineEnter"},
@@ -126,7 +122,6 @@ require("lazy").setup{
                     "numToStr/Comment.nvim",        -- Optional
                     "nvim-telescope/telescope.nvim", -- Optional
                 },
-                opts = { lsp = { auto_attach = true } },
             },
         },
     },
