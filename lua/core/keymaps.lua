@@ -15,3 +15,7 @@ map('n', 'ZS', ':update<CR>')
 
 vim.api.nvim_set_keymap('n', '<leader>a', ':NvimCmpToggle<CR>', { noremap = true, silent = true })
 vim.keymap.set('n',  '<leader>n', require("nvim-navbuddy").open, {noremap=true})
+
+vim.keymap.set('n', '<leader>th',
+               function() vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled()) end,
+               { noremap = true, silent = true })
