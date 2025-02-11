@@ -91,7 +91,6 @@ require("lazy").setup{
     },
     { "farmergreg/vim-lastplace" },
     { "lewis6991/gitsigns.nvim" },
-    { "rhysd/vim-clang-format" },
     { "https://bitbucket.org/JohnKaul/qbs.vim" },
     { "alepez/vim-gtest" },
     {
