@@ -107,7 +107,10 @@ require("lazy").setup{
     {'hrsh7th/cmp-buffer'},
     {'hrsh7th/cmp-path'},
     {'hrsh7th/cmp-cmdline'},
-    {'hrsh7th/nvim-cmp'},
+    {
+        'hrsh7th/nvim-cmp',
+        event = { "InsertEnter", "CmdlineEnter" }
+    },
     { 'saadparwaiz1/cmp_luasnip' }, -- Snippets source for nvim-cmp
     { "SmiteshP/nvim-navbuddy" },
     {
