@@ -29,3 +29,5 @@ vim.o.foldmethod = 'expr'
 vim.o.foldexpr='nvim_treesitter#foldexpr()'
 
 vim.g.netrw_banner = '0'
+
+vim.o.winborder = 'rounded'
