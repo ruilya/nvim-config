@@ -52,7 +52,7 @@ require("lazy").setup{
            { "<leader>tgs", "<CMD>Telescope git_status<CR>", mode = { "n", "i", "v" } },
            --{ "<C-c>", "<CMD>Telescope commands<CR>", mode = { "n", "i", "v" } },
            --{ "<C-k>", "<CMD>Telescope keymaps<CR>", mode = { "n", "i", "v" } },
-           { "<C-s>", "<CMD>Telescope grep_string<CR>", mode = { "n", "i", "v" } },
+           --{ "<C-s>", "<CMD>Telescope grep_string<CR>", mode = { "n", "i", "v" } },
        },
        config = true
     },
