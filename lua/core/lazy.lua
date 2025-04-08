@@ -41,7 +41,7 @@ require("lazy").setup{
            },
        },
        keys = {
-           { "<C-t>", "<CMD>Telescope<CR>", mode = { "n", "i", "v" } },
+           --{ "<C-t>", "<CMD>Telescope<CR>", mode = { "n", "i", "v" } },
            { "<leader>tff", "<CMD>Telescope find_files<CR>", mode = { "n", "i", "v" } },
            --{ "<leader>tfg", "<CMD>Telescope live_grep<CR>", mode = { "n", "i", "v" } },
            --keymap.set("n", "<leader>fg", ":lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>")
